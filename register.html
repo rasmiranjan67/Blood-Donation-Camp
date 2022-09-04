@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="/image/favicon (6).ico" type="image/x-icon">
+
+    <!-- <script defer>
+        const form =document.getElementById("register-form");
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            // console.log(form.elements.name.value);
+            const userData={
+                name: form.elements.name.value,
+                gender: form.elements.Gender.value,
+                age: form.elements.age.value,
+                bloodgroup: form.elements.bloodgroup.value,
+                address: form.elements.address.value,
+                date: form.elements.date.value,
+
+
+
+            };
+            console.log(userData)
+        });
+    </script> -->
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="head">Blood Donation <br> Camp</h1>
+        <img src="/image/vlood-donation.png" class="image" alt="" srcset="">
+        <form action="" id="register-form">
+        
+            <h2>Register</h2><br>
+
+        
+        <label for="">Name:</label><br>
+        <input type="text" placeholder="Enter Your Name" name="name"><br><br>
+        <label for="">Gender:</label><br><br>
+        <input type="radio" name="Gender" value="male">
+        <label for="">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="Gender" value="Female">
+        <label for="">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="Gender" value="Others">
+        <label for="">Others</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br>
+        <label for="">Age:</label><br>
+        <input type="number" placeholder="Enter Your Age" name="age" min="1" oninput="validity.valid||(value='');"><br><br>
+        <!-- <input type="number" min="1" value="10" placeholder="Enter Your Age"><br><br> -->
+        <label for="">Blood Group:</label><br>
+        <select name="bloodGroup" id="select">
+            <option value="">A+</option>
+            <option value="">B+</option>
+            <option value="">AB</option>
+            <option value="">O+</option>
+            <option value="">A-</option>
+            <option value="">B-</option>
+            <option value="">AB-</option>
+            <option value="">O-</option>
+        </select>
+        <br><br>
+        <label for="">Address:</label><br>
+        <input type="text" name="address" placeholder="Enter Your Address"><br>
+        <br>
+        <label for="">Preferred Date:</label><br>
+        <input type="date" name="date">
+        <br><br>
+        <input class="submit" type="submit" value="Register">
+    </form>
+    <img class="ribbon" src="/image/business-3d-red-ribbon.png" alt="" srcset="">
+</div>
+    <script defer>
+        const form =document.getElementById("register-form");
+        // console.log(form);
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            // console.log(form.elements.name.value);
+            const userData={
+                name: form.elements.name.value,
+                gender: document.querySelector("input[name='Gender']:checked").value,
+                age: form.elements.age.value,
+                bloodgroup: form.elements.bloodGroup.value,
+                address: form.elements.address.value,
+                date: form.elements.date.value,
+
+
+
+            };
+            console.log(userData);
+        });
+    </script>
+</body>
+
+</html>

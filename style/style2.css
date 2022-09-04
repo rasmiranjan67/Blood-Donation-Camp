@@ -1,0 +1,9 @@
+body{
+    background-image: url(/image/bg1.webp);
+    background-repeat: repeat;
+    /* background-position: center top; */
+    /* background-position: bottom right; */
+    /* background-position: 50% 50%; */
+    background-size: cover;
+    background-attachment: fixed;
+}
